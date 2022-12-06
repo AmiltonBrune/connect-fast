@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <br />
-<div align="left">
+<div align="center">
   <a href="https://github.com/github_username/repo_name">
     <img src="frontend/src/assets/svgs/logo.svg" alt="Logo" width="100" height="100">
   </a>
@@ -11,7 +11,7 @@
 
 
 ### Link Demostração
-<div align="center">
+<div align="left">
   <a href="https://connect-fast.abrune.com.br/" target="_blank">
    Ir para a demo
   </a>
