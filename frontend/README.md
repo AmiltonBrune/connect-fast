@@ -7,12 +7,15 @@
   </a>
 
 <h3 align="center">Connect Fast</h3>
-
-  <p align="center">
-    Projeto desenvolvido para uma teste
-  </p>
 </div>
 
+
+### Link Demostração
+<div align="center">
+  <a href="https://connect-fast.abrune.com.br/">
+   Ir para a demo
+  </a>
+</div>
 
 ### Desenvolvido utilizando
 
