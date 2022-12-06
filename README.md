@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="src/assets/svgs/logo.svg" alt="Logo" width="100" height="100">
+    <img src="frontend/src/assets/svgs/logo.svg" alt="Logo" width="100" height="100">
   </a>
 
 <h3 align="center">Connect Fast</h3>
