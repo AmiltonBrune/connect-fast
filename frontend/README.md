@@ -12,7 +12,7 @@
 
 ### Link Demostração
 <div align="center">
-  <a href="https://connect-fast.abrune.com.br/">
+  <a href="https://connect-fast.abrune.com.br/" target="_blank">
    Ir para a demo
   </a>
 </div>
