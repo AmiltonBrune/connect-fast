@@ -16,6 +16,7 @@ const light = {
     error: '#EC3535',
 
     gradient: '#6FCF97,#27AE63,#219653',
+    backgroud: '#f7f7f7',
   },
 };
 
