@@ -5,7 +5,7 @@ import { Button } from 'components/Button';
 import { Input } from 'components/Input';
 import { Checkbox } from 'components/Checkbox';
 
-import { useModal } from 'hooks/modal';
+import { useModal, useAuth } from 'hooks';
 import Loading from 'components/Loading';
 
 import {
@@ -27,22 +27,15 @@ function Signin() {
   const [checked, setChecked] = useState(false);
 
   const { isShowingLoading, toggleLoading } = useModal();
+  const { signIn } = useAuth();
 
-  const handleChange = () => {
-    setChecked(!checked);
+  // const handleChange = () => {
+  //   setChecked(!checked);
 
-    setTimeout(() => {
-      toggleLoading();
-    }, 3000);
-  };
-
-  const teste = () => {
-    toggleLoading();
-
-    setTimeout(() => {
-      toggleLoading();
-    }, 3000);
-  };
+  //   setTimeout(() => {
+  //     toggleLoading();
+  //   }, 3000);
+  // };
 
   return (
     <Container>
@@ -59,7 +52,7 @@ function Signin() {
             placeholder='Digite sua senha...'
           />
           <TextFormContainer>
-            <TextFormContent onClick={handleChange}>
+            <TextFormContent>
               {checked ? (
                 <BsFillCheckCircleFill size={20} color='#27ae60' />
               ) : (
@@ -69,7 +62,11 @@ function Signin() {
             </TextFormContent>
             <TextFormLink>Esqueceu a senha?</TextFormLink>
           </TextFormContainer>
-          <Button type='submit' color='#fff' onClick={teste}>
+          <Button
+            type='submit'
+            color='#fff'
+            onClick={() => signIn('usuario@teste.com', '123')}
+          >
             entrar
           </Button>
           <Button
