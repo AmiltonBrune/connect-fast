@@ -61,7 +61,7 @@ export const FooterContainer = styled.div`
 
   > button {
     font-size: 14px;
-    width: 150px;
+    width: ${(props) => (props.btnWidth ? props.btnWidth : '150px')};
     height: 50px;
   }
 `;

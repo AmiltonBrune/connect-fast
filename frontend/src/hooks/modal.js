@@ -4,11 +4,19 @@ const ModalContext = createContext();
 
 const ModalProvider = ({ children }) => {
   const [isShowing, setIsShowing] = useState(false);
-  const [isShowingAlert, setIsShowingAlert] = useState(false);
+  const [isShowingEdit, setIsShowingEdit] = useState(false);
+  const [isShowingAlertSucess, setIsShowingAlertSucess] = useState(false);
+  const [isShowingAlertWarning, setIsShowingAlertWarning] = useState(false);
+  const [isShowingAlertError, setIsShowingAlertError] = useState(false);
   const [isShowingLoading, setIsShowinLoading] = useState(false);
 
   const toggle = () => setIsShowing(!isShowing);
-  const toggleAlert = () => setIsShowingAlert(!isShowingAlert);
+  const toggleEdit = () => setIsShowingEdit(!isShowingEdit);
+  const toggleAlertSucess = () =>
+    setIsShowingAlertSucess(!isShowingAlertSucess);
+  const toggleAlertWarning = () =>
+    setIsShowingAlertWarning(!isShowingAlertWarning);
+  const toggleAlertError = () => setIsShowingAlertError(!isShowingAlertError);
   const toggleLoading = () => setIsShowinLoading(!isShowingLoading);
 
   return (
@@ -16,8 +24,14 @@ const ModalProvider = ({ children }) => {
       value={{
         isShowing,
         toggle,
-        isShowingAlert,
-        toggleAlert,
+        isShowingAlertSucess,
+        toggleAlertSucess,
+        isShowingAlertError,
+        toggleAlertError,
+        isShowingAlertWarning,
+        toggleAlertWarning,
+        isShowingEdit,
+        toggleEdit,
         isShowingLoading,
         toggleLoading,
       }}

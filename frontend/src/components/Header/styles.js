@@ -34,4 +34,11 @@ export const TitleContainer = styled.div`
 
 export const ButtonContainer = styled.div`
   padding-right: 50px;
+
+  > button {
+    font-size: 14px;
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+  }
 `;

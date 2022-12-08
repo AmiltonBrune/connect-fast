@@ -10,5 +10,6 @@ export const Container = styled.div`
 
   > p {
     font-size: 24px;
+    text-align: ${(props) => props.textAlign};
   }
 `;
