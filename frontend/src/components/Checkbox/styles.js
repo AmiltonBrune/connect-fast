@@ -6,7 +6,7 @@ export const Container = styled.input`
   background-color: white;
   border-radius: 50%;
   vertical-align: middle;
-  border: 2px solid #27ae60;
+  border: ${(props) => `2px solid ${props.theme.colors.secondary}`};
   appearance: none;
   -webkit-appearance: none;
   outline: none;

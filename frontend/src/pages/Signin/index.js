@@ -5,7 +5,7 @@ import { Button } from 'components/Button';
 import { Input } from 'components/Input';
 import { Checkbox } from 'components/Checkbox';
 
-import { useModal } from 'hooks/modal';
+import { useModal, useAuth } from 'hooks';
 import Loading from 'components/Loading';
 
 import {
@@ -27,21 +27,19 @@ function Signin() {
   const [checked, setChecked] = useState(false);
 
   const { isShowingLoading, toggleLoading } = useModal();
+  const { signIn } = useAuth();
 
   const handleChange = () => {
     setChecked(!checked);
-
-    setTimeout(() => {
-      toggleLoading();
-    }, 3000);
   };
 
-  const teste = () => {
+  const handleSubmit = () => {
     toggleLoading();
 
     setTimeout(() => {
       toggleLoading();
-    }, 3000);
+      signIn('usuario@teste.com', '123');
+    }, 600);
   };
 
   return (
@@ -69,7 +67,7 @@ function Signin() {
             </TextFormContent>
             <TextFormLink>Esqueceu a senha?</TextFormLink>
           </TextFormContainer>
-          <Button type='submit' color='#fff' onClick={teste}>
+          <Button type='submit' color='#fff' onClick={handleSubmit}>
             entrar
           </Button>
           <Button

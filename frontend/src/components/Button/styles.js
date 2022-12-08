@@ -11,12 +11,12 @@ export const Container = styled.button`
   background: ${(props) =>
     props.bgColor
       ? props.bgColor
-      : 'linear-gradient(to right,#6FCF97,  #27AE60 , #219653)'};
+      : `linear-gradient(to right,${props.theme.colors.gradient})`};
 
   border-radius: 50px;
   padding: 10px;
 
-  transition: opacity 0.3s;
+  transition: opacity 0.3s linear;
 
   border: ${(props) => (props.isBorder ? '2px solid transparent' : 'none')};
 
@@ -24,7 +24,7 @@ export const Container = styled.button`
     background: ${(props) =>
       props.color
         ? props.color
-        : ' linear-gradient(to right, #6fcf97, #27ae60, #219653)'};
+        : `linear-gradient(to right, ${props.theme.colors.gradient})`};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

@@ -44,7 +44,7 @@ export const Content = styled.div`
     left: 68px;
     height: 100px;
     width: 60px;
-    background: #219653;
+    background: ${(props) => props.theme.colors.primary};
   }
   .body::after {
     content: '';
@@ -53,7 +53,7 @@ export const Content = styled.div`
     left: 20px;
     height: 100px;
     width: 60px;
-    background: #219653;
+    background: ${(props) => props.theme.colors.primary};
     transform: skewX(14deg);
   }
   .right-arm {
@@ -62,7 +62,7 @@ export const Content = styled.div`
     left: 110px;
     height: 44px;
     width: 90px;
-    background: #219653;
+    background: ${(props) => props.theme.colors.primary};
     border-radius: 22px;
     /** animation */
     transform-origin: 16px 22px;
@@ -101,7 +101,7 @@ export const Content = styled.div`
     left: 26px;
     height: 44px;
     width: 70px;
-    background: #219653;
+    background: ${(props) => props.theme.colors.primary};
     border-bottom-left-radius: 8px;
     /** animation */
     transform-origin: 60px 26px;
@@ -150,7 +150,7 @@ export const Content = styled.div`
     height: 106px;
     width: 80px;
     border-bottom-right-radius: 55%;
-    background: #fff;
+    background: ${(props) => props.theme.colors.white};
   }
   .head .beard::after {
     content: '';
@@ -160,7 +160,7 @@ export const Content = styled.div`
     width: 40px;
     height: 20px;
     border-radius: 20px;
-    background: #fff;
+    background: ${(props) => props.theme.colors.white};
   }
   .head .face {
     position: absolute;
@@ -190,7 +190,7 @@ export const Content = styled.div`
     height: 20px;
     border-radius: 20px;
     border-bottom-right-radius: 0px;
-    background: #fff;
+    background: ${(props) => props.theme.colors.white};
   }
   .head .face .adds {
     /** Nose */
@@ -221,7 +221,7 @@ export const Content = styled.div`
     width: 160px;
     height: 20px;
     border-radius: 20px;
-    background: #219653;
+    background: ${(props) => props.theme.colors.primary};
   }
   .head .hat::before {
     content: '';
@@ -233,7 +233,8 @@ export const Content = styled.div`
     height: 0;
     border-style: solid;
     border-width: 0 34px 70px 50px;
-    border-color: transparent transparent #219653 transparent;
+    border-color: transparent transparent
+      ${(props) => props.theme.colors.primary} transparent;
   }
   .head .hat::after {
     content: '';
@@ -242,7 +243,7 @@ export const Content = styled.div`
     left: 0;
     width: 160px;
     height: 20px;
-    background: #219653;
+    background: ${(props) => props.theme.colors.primary};
     border-radius: 20px;
   }
   .head .hat .hat-of-the-hat {
@@ -253,7 +254,8 @@ export const Content = styled.div`
     height: 0;
     border-style: solid;
     border-width: 0 25px 25px 19px;
-    border-color: transparent transparent #219653 transparent;
+    border-color: transparent transparent
+      ${(props) => props.theme.colors.primary} transparent;
   }
   .head .hat .hat-of-the-hat::after {
     content: '';
@@ -264,7 +266,7 @@ export const Content = styled.div`
     height: 10px;
     border-radius: 10px;
     border-bottom-left-radius: 0px;
-    background: #219653;
+    background: ${(props) => props.theme.colors.primary};
     transform: rotate(40deg);
   }
   .head .hat .four-point-star {
@@ -276,7 +278,7 @@ export const Content = styled.div`
   .head .hat .four-point-star::before {
     content: '';
     position: absolute;
-    background: #fff;
+    background: ${(props) => props.theme.colors.white};
     display: block;
     left: 0;
     width: 141.4213%;
@@ -543,7 +545,8 @@ export const Content = styled.div`
     height: 0;
     border-style: solid;
     border-width: 0 28px 48px 28px;
-    border-color: transparent transparent #219653 transparent;
+    border-color: transparent transparent
+      ${(props) => props.theme.colors.primary} transparent;
   }
   /** 10s animation - 10% = 1s */
   @keyframes path_circle {
