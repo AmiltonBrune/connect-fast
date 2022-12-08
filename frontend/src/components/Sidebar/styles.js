@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 export const Container = styled.aside`
   grid-area: AS;
   background-color: ${(props) => props.theme.colors.primary};
-  padding-left: 50px;
 
   position: relative;
 
@@ -67,16 +66,18 @@ export const LogImg = styled.img`
 
 export const Profile = styled.div`
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+
+  width: 100%;
 
   span {
     color: ${(props) => props.theme.colors.white};
-    font-size: 30px;
+    font-size: 16px;
     font-weight: 500;
 
-    margin-top: 15px;
+    margin-top: 20px;
   }
 
   @media (max-width: 768px) {
@@ -97,6 +98,7 @@ export const ProfileImagem = styled.img`
 export const MenuContainer = styled.nav`
   display: flex;
   flex-direction: column;
+  padding-left: 50px;
 
   margin: 70px 0 0 0;
 
@@ -199,11 +201,13 @@ export const ToggleMenu = styled.button`
 export const ThemeToggleFooter = styled.footer`
   display: flex;
   position: absolute;
+  align-items: center;
+  justify-content: center;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 100px;
+  width: 100%;
   bottom: 30px;
 
   @media (max-width: 768px) {

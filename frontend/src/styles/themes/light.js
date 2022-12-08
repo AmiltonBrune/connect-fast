@@ -11,7 +11,7 @@ const light = {
     gray: '#b7bcc7',
 
     success: '#3FD171',
-    info: '#357EEC',
+    info: '#1271CA',
     warning: '#E9C713',
     error: '#EC3535',
 

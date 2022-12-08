@@ -29,13 +29,18 @@ function Signin() {
   const { isShowingLoading, toggleLoading } = useModal();
   const { signIn } = useAuth();
 
-  // const handleChange = () => {
-  //   setChecked(!checked);
+  const handleChange = () => {
+    setChecked(!checked);
+  };
 
-  //   setTimeout(() => {
-  //     toggleLoading();
-  //   }, 3000);
-  // };
+  const handleSubmit = () => {
+    toggleLoading();
+
+    setTimeout(() => {
+      toggleLoading();
+      signIn('usuario@teste.com', '123');
+    }, 600);
+  };
 
   return (
     <Container>
@@ -52,7 +57,7 @@ function Signin() {
             placeholder='Digite sua senha...'
           />
           <TextFormContainer>
-            <TextFormContent>
+            <TextFormContent onClick={handleChange}>
               {checked ? (
                 <BsFillCheckCircleFill size={20} color='#27ae60' />
               ) : (
@@ -62,11 +67,7 @@ function Signin() {
             </TextFormContent>
             <TextFormLink>Esqueceu a senha?</TextFormLink>
           </TextFormContainer>
-          <Button
-            type='submit'
-            color='#fff'
-            onClick={() => signIn('usuario@teste.com', '123')}
-          >
+          <Button type='submit' color='#fff' onClick={handleSubmit}>
             entrar
           </Button>
           <Button

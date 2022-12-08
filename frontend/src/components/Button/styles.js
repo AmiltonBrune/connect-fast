@@ -16,7 +16,7 @@ export const Container = styled.button`
   border-radius: 50px;
   padding: 10px;
 
-  transition: opacity 0.3s;
+  transition: opacity 0.3s linear;
 
   border: ${(props) => (props.isBorder ? '2px solid transparent' : 'none')};
 

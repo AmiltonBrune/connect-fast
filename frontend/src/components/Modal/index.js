@@ -23,6 +23,7 @@ const Modal = ({
   justifyContent,
   width,
   height,
+  btnWidth,
   isCloseButton,
 }) =>
   isShowing
@@ -42,7 +43,10 @@ const Modal = ({
 
               <Body>{children}</Body>
               <Footer>
-                <FooterContainer justifyContent={justifyContent}>
+                <FooterContainer
+                  justifyContent={justifyContent}
+                  btnWidth={btnWidth}
+                >
                   {footer}
                 </FooterContainer>
               </Footer>

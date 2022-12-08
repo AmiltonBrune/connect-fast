@@ -27,34 +27,9 @@ const MainHeader = () => {
       '/': {
         name: 'novo cliente',
         isView: true,
-        onclick: () => {},
-      },
-      '/financial': {
-        name: 'gerar relatório',
-        isView: true,
-      },
-      '/services': {
-        name: 'novo serviço',
-        isView: true,
         onclick: () => {
           toggle();
         },
-      },
-      '/cupons': {
-        name: 'novo cupom',
-        isView: true,
-        onclick: () => {
-          toggle();
-        },
-      },
-      '/clients': {
-        isView: false,
-      },
-      '/entry': {
-        isView: false,
-      },
-      '/exits': {
-        isView: false,
       },
     };
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { MdLogout, MdMenu, MdClose } from 'react-icons/md';
 
-import { useAuth } from 'hooks';
+import { useAuth, useModal } from 'hooks';
 
 import user from 'assets/svgs/user.svg';
 
@@ -24,12 +24,14 @@ const Sidebar = () => {
   const [toggleMenuIsOpened, setToggleMenuIsOpened] = useState(false);
   const location = useLocation();
   const { signOut } = useAuth();
+  const { toggleLoading } = useModal();
 
   const handleToggleMenu = () => {
     setToggleMenuIsOpened(!toggleMenuIsOpened);
   };
 
   const handleSignOut = () => {
+    toggleLoading();
     signOut();
   };
 
@@ -41,7 +43,8 @@ const Sidebar = () => {
         </ToggleMenu>
       </Header>
       <Profile>
-        <ProfileImagem src={user} alt='logo' />
+        <ProfileImagem src={user} alt='user' />
+        <span>Amilton Brune</span>
       </Profile>
       <MenuContainer>
         {sidebarMock.map(({ name, route, Icon }) => (
