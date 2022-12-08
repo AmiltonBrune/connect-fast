@@ -29,7 +29,7 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.span`
-  color: #000000;
+  color: ${(props) => props.theme.colors.black};
   font-weight: 400;
   font-size: 18px;
   text-align: left;
@@ -41,7 +41,7 @@ export const Header = styled.div`
 
 export const Body = styled.div`
   padding: 10px;
-  color: #000000;
+  color: ${(props) => props.theme.colors.black};
   height: 100%;
 `;
 
@@ -72,8 +72,8 @@ export const CloseButton = styled.button`
   padding: 20px;
   border: none;
   font-size: 22px;
-  color: #000000;
-  background: #fff;
+  color: ${(props) => props.theme.colors.black};
+  background: ${(props) => props.theme.colors.white};
   position: absolute;
   right: 0;
   top: 0;

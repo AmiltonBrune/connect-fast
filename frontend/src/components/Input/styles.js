@@ -13,22 +13,22 @@ export const Container = styled.div`
 
     font-size: 16px;
 
-    background: linear-gradient(white, white) padding-box,
-      linear-gradient(to right, #6fcf97, #27ae60, #219653) border-box;
+    background: ${(props) => `linear-gradient(white, white) padding-box,
+      linear-gradient(to right, ${props.theme.colors.gradient}) border-box`};
     text-indent: ${(props) => (props.icon ? `20px` : '0px')};
   }
 
   input::placeholder {
-    color: #b7bcc7;
+    color: ${(props) => props.theme.colors.gray};
     opacity: 1;
   }
 
   :-ms-input-placeholder {
-    color: #b7bcc7;
+    color: ${(props) => props.theme.colors.gray};
   }
 
   ::-ms-input-placeholder {
-    color: #b7bcc7;
+    color: ${(props) => props.theme.colors.gray};
   }
 
   label {
@@ -36,7 +36,7 @@ export const Container = styled.div`
     top: -10px;
     z-index: 1;
     left: 30px;
-    background-color: #fff;
+    background-color: ${(props) => props.theme.colors.white};
     padding: 0 5px;
     font-size: 14px;
     font-weight: 400;

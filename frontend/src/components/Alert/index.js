@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Button } from '../Button';
+import { Button } from 'components/Button';
 import Modal from 'components/Modal';
 
 import success from 'assets/svgs/success.svg';
 
 import { Container } from './styles';
 
-function AlertSuccess({ isShowingAlert, toggleAlert, msg }) {
+function Alert({ isShowingAlert, toggleAlert, msg, bgColor, textButton }) {
   return (
     <Modal
       isShowing={isShowingAlert}
@@ -17,8 +17,8 @@ function AlertSuccess({ isShowingAlert, toggleAlert, msg }) {
       height='500px'
       justifyContent='center'
       footer={
-        <Button onClick={toggleAlert} bgColor='#3561EC'>
-          ok
+        <Button onClick={toggleAlert} bgColor={bgColor}>
+          {textButton}
         </Button>
       }
     >
@@ -30,4 +30,4 @@ function AlertSuccess({ isShowingAlert, toggleAlert, msg }) {
   );
 }
 
-export default AlertSuccess;
+export default Alert;
