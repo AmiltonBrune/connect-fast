@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -14,6 +13,11 @@ export const Container = styled.div`
 export const Tille = styled.span`
   font-size: 24px;
   font-weight: bold;
+`;
+
+export const Description = styled.p`
+  font-size: 16px;
+  font-weight: 300;
 `;
 
 export const LogoContainer = styled.div`
@@ -71,30 +75,4 @@ export const Form = styled.div`
   justify-content: space-between;
   width: 100%;
   gap: 40px;
-`;
-
-export const TextFormContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const TextFormContent = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-`;
-
-export const TextFormLink = styled(Link)`
-  color: #27ae60;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 400;
-  margin-left: 10px;
-
-  @media (max-width: 393px) {
-    font-size: 14px;
-  }
 `;

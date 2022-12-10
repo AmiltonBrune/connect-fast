@@ -7910,6 +7910,16 @@ react-app-rewired@^2.2.1:
   dependencies:
     semver "^5.6.0"
 
+react-auth-code-input@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/react-auth-code-input/-/react-auth-code-input-3.2.1.tgz#7142fd0699e9a102b4427d22b46f12e77cbf8ba9"
+  integrity sha512-oWWKbxDLU5g46gvE1DIvNFHsDx37JSAfB6WX8luG6TWZB3iDfKMjQnhUgb+0imL/6ykGVMqdZ426tQW1uj25kg==
+
+react-countdown-circle-timer@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-countdown-circle-timer/-/react-countdown-circle-timer-3.1.0.tgz#394737817a7bec9cb9162e4c3e80f8f18ef20820"
+  integrity sha512-vU3fQ+Te7abhSmvTT5N0+4aOJhXAg6wVWvpEd5snkB7lFrAlEBl5dqzLSGnPZDI4MWbp7ayMDkcLWALWE+flQQ==
+
 react-countup@^6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/react-countup/-/react-countup-6.4.0.tgz#f18d24e40c37c465b29353172cc8b3b5e82f3241"
@@ -7965,6 +7975,11 @@ react-icons@^4.7.1:
   version "4.7.1"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.7.1.tgz#0f4b25a5694e6972677cb189d2a72eabea7a8345"
   integrity sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==
+
+react-input-verification-code@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-input-verification-code/-/react-input-verification-code-1.0.2.tgz#5d859fe5f0213e1878dc1580e2ca1997fa0a1f25"
+  integrity sha512-mZsFFhlCkyu/0+OASkA+eAK/oSblBeYMHFiy3sRom1jklyH37dhmzklvuUfHbyepJW/DJ3WtT0w2x7pu16F+Bw==
 
 react-is@^16.10.2, react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"

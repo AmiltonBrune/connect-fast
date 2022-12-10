@@ -65,7 +65,7 @@ function CreateClient() {
             <ButtonContainer>
               <Input label='CEP' type='text' placeholder='Digite o cep...' />
               <Button
-                bgColor='linear-gradient(white, white) padding-box,linear-gradient(to right, #6fcf97, #27ae60, #219653) border-box'
+                bgColor='linear-gradient(white, white) padding-box,`linear-gradient(to right,${props.theme.colors.gradient})` border-box'
                 isBorder='true'
               >
                 buscar cep

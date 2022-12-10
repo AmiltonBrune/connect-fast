@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -16,6 +15,11 @@ export const Tille = styled.span`
   font-weight: bold;
 `;
 
+export const Description = styled.p`
+  font-size: 16px;
+  font-weight: 300;
+`;
+
 export const LogoContainer = styled.div`
   width: 100%;
   display: flex;
@@ -29,18 +33,52 @@ export const Logo = styled.img`
 `;
 
 export const Content = styled.div`
-  background: #fff;
+  background: ${(props) => props.theme.colors.white};
   width: 70%;
-  justify-content: flex-start;
+  height: 100vh;
+  justify-content: center;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
   padding: 50px;
   gap: 40px;
 
+  --ReactInputVerificationCode-itemWidth: 3.5rem;
+  --ReactInputVerificationCode-itemHeight: 3.5rem;
+
+  .ReactInputVerificationCode__item.ReactInputVerificationCode__item {
+    position: relative;
+    color: ${(props) => props.theme.colors.black};
+    font-weight: 500;
+  }
+
+  .ReactInputVerificationCode__item,
+  .ReactInputVerificationCode__item.is-active {
+    box-shadow: none;
+  }
+
+  .ReactInputVerificationCode__item:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 5px;
+    background-color: #ebebeb;
+    transition: background-color 0.2s ease-out;
+    border-radius: 50px;
+  }
+
+  .ReactInputVerificationCode__item.is-active:after {
+    background-color: #219653;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
-    height: 100vh;
+
+    --ReactInputVerificationCode-itemWidth: 2.5rem;
+    --ReactInputVerificationCode-itemHeight: 3.5rem;
   }
 `;
 
@@ -68,7 +106,9 @@ export const ContentBackgroud = styled.div`
 export const Form = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   gap: 40px;
 `;
@@ -80,19 +120,20 @@ export const TextFormContainer = styled.div`
   align-items: center;
 `;
 
-export const TextFormContent = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-`;
-
-export const TextFormLink = styled(Link)`
+export const Text = styled.a`
   color: #27ae60;
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
   margin-left: 10px;
+
+  cursor: pointer;
+
+  transition: opacity 0.3s linear;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   @media (max-width: 393px) {
     font-size: 14px;

@@ -7,7 +7,7 @@ const light = {
     tertiary: '#6FCF97',
 
     white: '#fff',
-    black: '#222',
+    black: '#262626',
     gray: '#b7bcc7',
 
     success: '#3FD171',

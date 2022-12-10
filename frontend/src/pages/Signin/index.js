@@ -65,14 +65,14 @@ function Signin() {
               )}
               <TextFormLink>Lembrar de mim</TextFormLink>
             </TextFormContent>
-            <TextFormLink>Esqueceu a senha?</TextFormLink>
+            <TextFormLink to='/forgot-password'>Esqueceu a senha?</TextFormLink>
           </TextFormContainer>
           <Button type='submit' color='#fff' onClick={handleSubmit}>
             entrar
           </Button>
           <Button
             type='submit'
-            bgColor='linear-gradient(white, white) padding-box,linear-gradient(to right, #6fcf97, #27ae60, #219653) border-box'
+            bgColor='linear-gradient(white, white) padding-box,`linear-gradient(to right,${props.theme.colors.gradient})` border-box'
             isBorder='true'
           >
             cadastrar
